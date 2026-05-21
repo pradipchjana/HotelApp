@@ -1,37 +1,43 @@
 package com.hotelApp.user.service;
 
+import com.hotelApp.user.exception.InvalidCredentials;
+import com.hotelApp.user.exception.UserNotFound;
 import com.hotelApp.user.modal.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.HashMap;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+@SpringBootTest
+@AutoConfiguration
 class UserServiceTest {
-  UserService service = new UserService(new HashMap<>());
+
+  @Autowired
+  UserService service;
+  User testUser = new User("john","doe");
 
   @BeforeEach
-  void registerUser(){
-      service.register(new User("john","doe"));
+  void addUser(){
+    service.removeByUsername(testUser.getUsername());
+    service.register(testUser);
   }
 
   @Test
   void shouldValidateFalseWhenLoginWithWrongUsername(){
-      boolean isLoggedIn = service.login(new User("jane","doe"));
-
-      assert (!isLoggedIn);
+    assertThrows(UserNotFound.class,() -> service.login(new User("jane","doe")));
   }
 
   @Test
   void shouldValidateFalseWhenLoginWithWrongPassword(){
-      boolean isLoggedIn = service.login(new User("john","deer"));
-
-      assert (!isLoggedIn);
+     assertThrows(InvalidCredentials.class, ()->service.login(new User("john","deer")));
   }
 
   @Test
   void shouldValidateTrueWhenLoginWithValidCredentials(){
-      boolean isLoggedIn = service.login(new User("john","doe"));
-
-      assert (isLoggedIn);
+    service.login(new User("john","doe"));
   }
 
   @Test
