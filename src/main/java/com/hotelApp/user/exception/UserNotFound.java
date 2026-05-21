@@ -1,7 +1,7 @@
-package com.hotelApp.user;
+package com.hotelApp.user.exception;
 
 public class UserNotFound extends RuntimeException {
   public UserNotFound() {
-    super("Username not found");
+    super("User not found");
   }
 }
