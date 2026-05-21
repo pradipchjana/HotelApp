@@ -1,5 +1,6 @@
 package com.hotelApp.user.controller;
 
+import com.hotelApp.security.JWTService;
 import com.hotelApp.user.modal.User;
 import com.hotelApp.user.records.LoginRecord;
 import com.hotelApp.user.records.SignUpRecord;
@@ -10,8 +11,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/users")
 public class UserController {
   private final UserService service;
-  public UserController(UserService service){
+  private final JWTService jwtService;
+
+  public UserController(UserService service, JWTService jwtService){
     this.service = service;
+    this.jwtService = jwtService;
   }
 
   @PostMapping("/register")
@@ -28,7 +32,8 @@ public class UserController {
   LoginRecord loginUser(@RequestBody User user){
     try {
       System.out.println("username: "+user.getUsername() + ", password:  "+user.getPassword()+", id: "+user.getId());
-      String token =  service.login(user);
+      String token = jwtService.generateToken(user);
+
       return new LoginRecord(token, "Login successful");
     }catch (Exception e){
       return new LoginRecord(null,e.getMessage());

@@ -5,6 +5,7 @@ import com.hotelApp.booking.modal.BookingModal;
 import com.hotelApp.booking.request.BookingRequest;
 import com.hotelApp.booking.service.BookingService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,9 +20,9 @@ public class BookingController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createBooking(@RequestBody BookingRequest details, @CookieValue("username") String username) {
+    public ResponseEntity<?> createBooking(@RequestBody BookingRequest details, Authentication authentication) {
         try {
-            BookingModal jana = this.bookingService.createBooking(username, details);
+            BookingModal jana = this.bookingService.createBooking(authentication.getName(), details);
             return ResponseEntity.ok(jana);
         } catch (HotelAppException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -29,8 +30,8 @@ public class BookingController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BookingModal>> listMyBookings(@CookieValue("username") String username) {
-        List<BookingModal> bookings = this.bookingService.listMyBookings(username);
+    public ResponseEntity<List<BookingModal>> listMyBookings(Authentication authentication) {
+        List<BookingModal> bookings = this.bookingService.listMyBookings(authentication.getName());
 
         return ResponseEntity.ok().body(bookings);
     }

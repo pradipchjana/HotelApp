@@ -1,11 +1,15 @@
 package com.hotelApp.user.config;
 
 
-//@Configuration
-//public class UserConfig {
-//
-//  @Bean
-//  public User createUser(){
-//    return new User();
-//  }
-//}
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+@Configuration
+public class UserConfig {
+
+  @Bean
+  public BCryptPasswordEncoder encoder(){
+    return new BCryptPasswordEncoder();
+  }
+}
