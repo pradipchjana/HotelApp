@@ -1,30 +1,29 @@
 package com.hotelApp.hotel.service;
 
 import com.hotelApp.hotel.modal.Hotel;
+import com.hotelApp.hotel.repository.HotelRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class HotelService {
     private final IdGenerator idGenerator;
-    private final Map<String, Hotel> hotels;
+    private final HotelRepository hotelRepository;
 
-    public HotelService(IdGenerator idGenerator) {
+    public HotelService(IdGenerator idGenerator, HotelRepository hotelRepository) {
         this.idGenerator = idGenerator;
-        this.hotels = new HashMap<String, Hotel>();
+        this.hotelRepository = hotelRepository;
     }
 
     public void addHotels() {
         String id = idGenerator.generate();
         Hotel hotel = new Hotel(id, "Grand Plaza", "New York",10);
-        this.hotels.put(id, hotel);
+        this.hotelRepository.insert(hotel);
     }
 
     public List<Hotel> findHotels(String city) {
-        List<Hotel> searchResult = this.hotels.values().stream().filter(hotel -> hotel.isInThisCity(city)).toList();
+        List<Hotel> searchResult = this.hotelRepository.findAllByCity(city);
 
         return searchResult;
     }
