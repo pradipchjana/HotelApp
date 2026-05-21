@@ -1,5 +1,6 @@
 package com.hotelApp.user.service;
 
+import com.hotelApp.user.UserNotFound;
 import com.hotelApp.user.modal.User;
 import org.springframework.stereotype.Service;
 
@@ -13,16 +14,18 @@ public class UserService {
     this.users = initialUserMap;
   }
 
-  public void register(String username,String password) {
-    User user = new User(username, password);
-
+  public void register(User user) {
     users.put(user.getUsername(),user);
   }
 
-  public boolean login(String username,String password){
-    User user = users.get(username);
-    if(user == null) return false;
+  public boolean login(User user) throws UserNotFound {
+    if(user == null || users.get(user.getUsername()) == null) throw new UserNotFound();
 
-    return user.getPassword().equals(password);
+    String dbPass = users.get(user.getUsername()).getPassword();
+    return user.getPassword().equals(dbPass);
+  }
+
+  public boolean isUserPresent(String username){
+    return  users.get(username) != null;
   }
 }
