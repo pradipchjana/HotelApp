@@ -17,13 +17,11 @@ public class HotelController {
 
     public HotelController(HotelService hotelService) {
         this.hotelService = hotelService;
-        this.hotelService.addHotels();
     }
 
     @GetMapping("/api/search/hotels")
     public ResponseEntity<List<Hotel>> searchHotels(@RequestParam String city) {
         List<Hotel> hotels = this.hotelService.findHotels(city);
-        System.out.println(hotels + city);
         return ResponseEntity.ok().body(hotels);
     }
 }

@@ -16,12 +16,6 @@ public class HotelService {
         this.hotelRepository = hotelRepository;
     }
 
-    public void addHotels() {
-        String id = idGenerator.generate();
-        Hotel hotel = new Hotel(id, "Grand Plaza", "New York",10);
-        this.hotelRepository.insert(hotel);
-    }
-
     public List<Hotel> findHotels(String city) {
         return this.hotelRepository.findAllByCity(city);
     }
