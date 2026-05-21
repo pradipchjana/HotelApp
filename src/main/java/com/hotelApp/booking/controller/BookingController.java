@@ -4,6 +4,8 @@ import com.hotelApp.booking.modal.BookingModal;
 import com.hotelApp.booking.service.BookingService;
 import com.hotelApp.booking.exception.HotelAppException;
 import com.hotelApp.booking.request.BookingRequest;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +21,9 @@ public class BookingController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createBooking(@RequestBody BookingRequest details) {
+    public ResponseEntity<?> createBooking(@RequestBody BookingRequest details, @CookieValue("username") String username) {
         try {
-            BookingModal jana = this.bookingService.createBooking("Jana", details);
+            BookingModal jana = this.bookingService.createBooking(username, details);
             return ResponseEntity.ok(jana);
         } catch (HotelAppException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -29,8 +31,8 @@ public class BookingController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BookingModal>> listMyBookings() {
-        List<BookingModal> bookings = this.bookingService.listMyBookings("Jana");
+    public ResponseEntity<List<BookingModal>> listMyBookings(@CookieValue("username") String username) {
+        List<BookingModal> bookings = this.bookingService.listMyBookings(username);
 
         return ResponseEntity.ok().body(bookings);
     }
