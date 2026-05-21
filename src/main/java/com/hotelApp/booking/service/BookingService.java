@@ -1,12 +1,15 @@
-package com.hotelApp.booking;
+package com.hotelApp.booking.service;
 
+import com.hotelApp.booking.repository.BookingRepository;
 import com.hotelApp.booking.exception.HotelAppException;
 import com.hotelApp.booking.exception.RoomsNotAvailableException;
+import com.hotelApp.booking.modal.BookingModal;
 import com.hotelApp.booking.request.BookingRequest;
 import com.hotelApp.hotel.modal.Hotel;
 import com.hotelApp.hotel.repository.HotelRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,5 +32,9 @@ public class BookingService {
         }
 
         return this.bookingRepository.insert(new BookingModal(null, username, hotelId, rooms));
+    }
+
+    public List<BookingModal> listMyBookings(String username) {
+        return this.bookingRepository.findByUsername(username);
     }
 }

@@ -1,12 +1,13 @@
-package com.hotelApp.booking;
+package com.hotelApp.booking.controller;
 
+import com.hotelApp.booking.modal.BookingModal;
+import com.hotelApp.booking.service.BookingService;
 import com.hotelApp.booking.exception.HotelAppException;
 import com.hotelApp.booking.request.BookingRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/bookings")
@@ -25,6 +26,12 @@ public class BookingController {
         } catch (HotelAppException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
 
+    @GetMapping
+    public ResponseEntity<List<BookingModal>> listMyBookings() {
+        List<BookingModal> bookings = this.bookingService.listMyBookings("Jana");
+
+        return ResponseEntity.ok().body(bookings);
     }
 }
