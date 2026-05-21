@@ -1,0 +1,28 @@
+services:
+  server:
+    build: .
+    container_name: hotel-app
+    ports:
+      - "3000:3000"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/test
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+  mongo:
+    image: mongo:7
+    container_name: mongodb
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - backend
+
+volumes:
+  mongo_data:
+
+networks:
+  backend:
+    driver: bridge

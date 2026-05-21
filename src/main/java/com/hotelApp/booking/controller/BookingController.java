@@ -1,11 +1,9 @@
 package com.hotelApp.booking.controller;
 
-import com.hotelApp.booking.modal.BookingModal;
-import com.hotelApp.booking.service.BookingService;
 import com.hotelApp.booking.exception.HotelAppException;
+import com.hotelApp.booking.modal.BookingModal;
 import com.hotelApp.booking.request.BookingRequest;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
+import com.hotelApp.booking.service.BookingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
