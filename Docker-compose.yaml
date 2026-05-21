@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/test
+      MONGODB_URI: mongodb://mongo:27017/test
     depends_on:
       - mongo
     networks:
