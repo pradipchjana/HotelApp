@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="updated docker file for hotel service and user service">
-      <change beforePath="$PROJECT_DIR$/services/booking-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/Dockerfile" afterDir="false" />
+    <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="remove gradle">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +136,7 @@
       <workItem from="1779359039436" duration="5000" />
       <workItem from="1779424275809" duration="2557000" />
       <workItem from="1779441824136" duration="19000" />
-      <workItem from="1779445558479" duration="1232000" />
+      <workItem from="1779445558479" duration="3250000" />
     </task>
     <task id="LOCAL-00001" summary="add docker ignore for user service and hotel service">
       <option name="closed" value="true" />
@@ -151,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779444370588</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remove gradle">
+      <option name="closed" value="true" />
+      <created>1779446932578</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779446932578</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add docker ignore for user service and hotel service" />
     <MESSAGE value="updated docker file for hotel service and user service" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docker file for hotel service and user service" />
+    <MESSAGE value="remove gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove gradle" />
   </component>
 </project>
