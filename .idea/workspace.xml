@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="add docker ignore for user service and hotel service" />
+    <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="updated docker file for hotel service and user service">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/booking-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/service/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/security/JWTFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/booking-service/build/resources/main/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/booking-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/controller/HotelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/service/HotelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/resources/main/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/hotel-service/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/build/resources/main/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/gradlew.bat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +55,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pradipchjana&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:pradipchjana/HotelApp.git&quot;,
+    &quot;accountId&quot;: &quot;d1a02386-7d32-4406-8ddd-d907e8765c32&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -48,27 +80,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build HotelApp.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.HotelApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/pradipchandrajana/workspace/java/assignments/hotel-clone/services/user-service",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build HotelApp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.HotelApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pradipchandrajana/workspace/java/assignments/hotel-clone&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/services/user-service" />
@@ -114,6 +151,7 @@
       <workItem from="1779359039436" duration="5000" />
       <workItem from="1779424275809" duration="2557000" />
       <workItem from="1779441824136" duration="19000" />
+      <workItem from="1779445558479" duration="927000" />
     </task>
     <task id="LOCAL-00001" summary="add docker ignore for user service and hotel service">
       <option name="closed" value="true" />
@@ -123,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779443619990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated docker file for hotel service and user service">
+      <option name="closed" value="true" />
+      <created>1779444370588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779444370588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +177,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add docker ignore for user service and hotel service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker ignore for user service and hotel service" />
+    <MESSAGE value="updated docker file for hotel service and user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated docker file for hotel service and user service" />
   </component>
 </project>

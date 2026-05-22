@@ -10,5 +10,5 @@ RUN ./gradlew clean bootJar --no-daemon
 FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar hotel.jar
-EXPOSE 8000
+EXPOSE 8001
 ENTRYPOINT ["java", "-jar", "hotel.jar"]
