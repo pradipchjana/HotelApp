@@ -1,40 +1,64 @@
 package com.hotelApp.booking.service;
 
-import com.hotelApp.booking.repository.BookingRepository;
+import com.hotelApp.client.HotelService;
+import com.hotelApp.dto.HotelResponse;
 import com.hotelApp.booking.exception.HotelAppException;
 import com.hotelApp.booking.exception.RoomsNotAvailableException;
 import com.hotelApp.booking.modal.BookingModal;
+import com.hotelApp.booking.repository.BookingRepository;
 import com.hotelApp.booking.request.BookingRequest;
-import com.hotelApp.hotel.modal.Hotel;
-import com.hotelApp.hotel.repository.HotelRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BookingService {
-    private final HotelRepository hotelRepository;
-    private final BookingRepository bookingRepository;
 
-    public BookingService(HotelRepository hotelRepository, BookingRepository bookingRepository) {
-        this.hotelRepository = hotelRepository;
+    private final BookingRepository bookingRepository;
+    private final HotelService hotelService;
+
+    public BookingService(
+            BookingRepository bookingRepository,
+            HotelService hotelClient
+    ) {
         this.bookingRepository = bookingRepository;
+        this.hotelService = hotelClient;
     }
 
-    public BookingModal createBooking(String username, BookingRequest details) throws HotelAppException {
+    public BookingModal createBooking(
+            String username,
+            BookingRequest details
+    ) throws HotelAppException {
+
         String hotelId = details.hotel_id();
         int rooms = details.rooms();
-        Optional<Hotel> hotel = this.hotelRepository.findById(hotelId);
 
-        if(hotel.get().availableRooms < rooms){
-            throw new RoomsNotAvailableException("Rooms are not available");
+        HotelResponse hotel =
+                this.hotelService.getHotelById(hotelId);
+
+        if (hotel == null) {
+            throw new HotelAppException("Hotel not found");
         }
 
-        return this.bookingRepository.insert(new BookingModal(null, username, hotelId, rooms));
+        if (hotel.getAvailableRooms() < rooms) {
+            throw new RoomsNotAvailableException(
+                    "Rooms are not available"
+            );
+        }
+
+        return this.bookingRepository.insert(
+                new BookingModal(
+                        null,
+                        username,
+                        hotelId,
+                        rooms
+                )
+        );
     }
 
-    public List<BookingModal> listMyBookings(String username) {
+    public List<BookingModal> listMyBookings(
+            String username
+    ) {
         return this.bookingRepository.findByUsername(username);
     }
 }

@@ -1,3 +1,0 @@
-spring:
-  mongodb:
-    database: hotel-test

@@ -16,10 +16,10 @@ import java.util.List;
 @Component
 public class JWTFilter extends OncePerRequestFilter {
 
-  private final JWTService jwtService;
+  private final JWTVerifier jwtVerifier;
 
-  public JWTFilter(JWTService jwtService) {
-    this.jwtService = jwtService;
+  public JWTFilter(JWTVerifier jwtVerifier) {
+    this.jwtVerifier = jwtVerifier;
   }
 
   @Override
@@ -29,7 +29,7 @@ public class JWTFilter extends OncePerRequestFilter {
     if(header != null && header.startsWith("Bearer ")){
       String token = header.substring(7);
 
-      String username = jwtService.extractUsername(token);
+      String username = jwtVerifier.extractUsername(token);
 
       UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username,null, List.of());
 

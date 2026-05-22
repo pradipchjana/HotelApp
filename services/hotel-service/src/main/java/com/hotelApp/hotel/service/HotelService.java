@@ -5,6 +5,7 @@ import com.hotelApp.hotel.repository.HotelRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HotelService {
@@ -18,5 +19,9 @@ public class HotelService {
 
     public List<Hotel> findHotels(String city) {
         return this.hotelRepository.findAllByCity(city);
+    }
+
+    public Optional<Hotel> findHotel(String id) {
+        return hotelRepository.findById(id);
     }
 }
