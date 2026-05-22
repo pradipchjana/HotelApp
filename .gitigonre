@@ -1,0 +1,24 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Env
+.env
+
+# Java / Gradle
+.gradle/
+build/
+target/
+dump/
+
+# Node
+node_modules/
+
+# Coverage
+coverage/
