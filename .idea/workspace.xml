@@ -5,161 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/HotelApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/controller/BookingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/exception/HotelAppException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/exception/RoomsNotAvailableException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/modal/BookingModal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/repository/BookingRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/request/BookingRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/service/BookingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/hotel/controller/HotelController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/hotel/modal/Hotel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/hotel/repository/HotelRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/hotel/service/HotelService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/hotel/service/IdGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/security/JWTFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/security/JWTService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/security/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/config/UserConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/exception/InvalidCredentials.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/exception/UserAlreadyExists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/exception/UserNotFound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/modal/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/records/LoginRecord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/records/SignUpRecord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/repo/UserRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/user/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/resources/main/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/HotelApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/controller/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/exception/HotelAppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/exception/RoomsNotAvailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/modal/BookingModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/repository/BookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/request/BookingRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/booking/service/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/security/JWTFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/security/JWTService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/java/com/hotelApp/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/test/java/com/hotelApp/user/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/test/java/com/hotelApp/user/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/booking-service/src/test/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/HotelApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/controller/BookingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/exception/HotelAppException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/exception/RoomsNotAvailableException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/modal/BookingModal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/repository/BookingRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/request/BookingRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/booking/service/BookingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/controller/HotelController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/modal/Hotel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/repository/HotelRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/service/HotelService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/service/IdGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/security/JWTFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/security/JWTService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/security/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/config/UserConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/exception/InvalidCredentials.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/exception/UserAlreadyExists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/exception/UserNotFound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/modal/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/records/LoginRecord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/records/SignUpRecord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/repo/UserRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/user/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/resources/main/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/HotelApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/hotel/controller/HotelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/hotel/modal/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/hotel/repository/HotelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/hotel/service/HotelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/hotel/service/IdGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/security/JWTFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/security/JWTService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/java/com/hotelApp/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/test/java/com/hotelApp/user/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/test/java/com/hotelApp/user/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/hotel-service/src/test/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/HotelApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/controller/BookingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/exception/HotelAppException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/exception/RoomsNotAvailableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/modal/BookingModal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/repository/BookingRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/request/BookingRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/booking/service/BookingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/hotel/controller/HotelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/hotel/modal/Hotel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/hotel/repository/HotelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/hotel/service/HotelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/hotel/service/IdGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/security/JWTFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/security/JWTService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/config/UserConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/exception/InvalidCredentials.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/exception/UserAlreadyExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/exception/UserNotFound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/modal/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/records/LoginRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/records/SignUpRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/repo/UserRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hotelApp/user/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelApp/user/UserControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelApp/user/service/UserServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yaml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/hotel-service/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitigonre" beforeDir="false" afterPath="$PROJECT_DIR$/.gitigonre" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,15 +70,18 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/dineshkumar/workspace/java/assignments/HotelApp",
+    "last_opened_file_path": "/Users/pradipchandrajana/workspace/java/assignments/hotel-clone/services/user-service",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services/user-service" />
       <recent name="$PROJECT_DIR$/services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/services/user-service" />
     </key>
   </component>
