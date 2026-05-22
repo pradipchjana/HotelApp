@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hotelApp.user.service.UserServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-22T09:22:56.822Z" hostname="Dineshs-MacBook-Pro.local" time="0.918">
+  <properties/>
+  <testcase name="shouldValidateFalseWhenLoginWithWrongUsername()" classname="com.hotelApp.user.service.UserServiceTest" time="0.249"/>
+  <testcase name="shouldReturnFalseIfUserNotPresent()" classname="com.hotelApp.user.service.UserServiceTest" time="0.095"/>
+  <testcase name="shouldValidateFalseWhenLoginWithWrongPassword()" classname="com.hotelApp.user.service.UserServiceTest" time="0.104"/>
+  <testcase name="shouldReturnTrueIfUserPresent()" classname="com.hotelApp.user.service.UserServiceTest" time="0.072"/>
+  <system-out><![CDATA[2026-05-22T14:52:56.824+05:30  INFO 12051 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hotelApp.user.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-22T14:52:56.840+05:30  INFO 12051 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hotelApp.UserServiceApp for test class com.hotelApp.user.service.UserServiceTest
+2026-05-22T14:52:56.841+05:30  INFO 12051 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hotelApp.user.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-22T14:52:56.843+05:30  INFO 12051 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hotelApp.UserServiceApp for test class com.hotelApp.user.service.UserServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-22T14:52:56.873+05:30  INFO 12051 --- [    Test worker] c.hotelApp.user.service.UserServiceTest  : Starting UserServiceTest using Java 25.0.2 with PID 12051 (started by dineshkumar in /Users/dineshkumar/workspace/java/assignments/HotelApp/services/user-service)
+2026-05-22T14:52:56.873+05:30  INFO 12051 --- [    Test worker] c.hotelApp.user.service.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T14:52:57.023+05:30  INFO 12051 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-22T14:52:57.034+05:30  INFO 12051 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 MongoDB repository interface.
+2026-05-22T14:52:57.081+05:30  INFO 12051 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "26.2"}, "platform": "Java/Homebrew/25.0.2"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@54a056e4, com.mongodb.Jep395RecordCodecProvider@15994b0b, com.mongodb.KotlinCodecProvider@12cd129c, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-22T14:52:57.083+05:30  INFO 12051 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1426744, minRoundTripTimeNanos=0}
+2026-05-22T14:52:57.133+05:30  INFO 12051 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-05-22T14:52:57.214+05:30  INFO 12051 --- [    Test worker] c.hotelApp.user.service.UserServiceTest  : Started UserServiceTest in 0.365 seconds (process running for 4.693)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

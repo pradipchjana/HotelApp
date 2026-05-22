@@ -1,0 +1,45 @@
+.gradle
+services/user-service/build/
+!services/user-service/gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.kotlin
+
+### IntelliJ IDEA ###
+services/user-service/.idea/modules.xml
+services/user-service/.idea/jarRepositories.xml
+services/user-service/.idea/compiler.xml
+services/user-service/.idea/libraries/
+services/user-service/.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+/dump
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
