@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435927bf-f6db-4f42-8bb4-f01b018fc6b4" name="Changes" comment="updated docker file for hotel service and user service">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/booking-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/booking-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/booking/service/BookingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/booking-service/build/classes/java/main/com/hotelApp/security/JWTFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/booking-service/build/resources/main/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/booking-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/controller/HotelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/classes/java/main/com/hotelApp/hotel/service/HotelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/resources/main/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hotel-service/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/services/hotel-service/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/build/resources/main/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/gradlew.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +133,7 @@
       <workItem from="1779359039436" duration="5000" />
       <workItem from="1779424275809" duration="2557000" />
       <workItem from="1779441824136" duration="19000" />
-      <workItem from="1779445558479" duration="927000" />
+      <workItem from="1779445558479" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="add docker ignore for user service and hotel service">
       <option name="closed" value="true" />

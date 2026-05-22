@@ -8,6 +8,6 @@ RUN gradle clean bootJar --no-daemon
 
 FROM eclipse-temurin:25-jre
 WORKDIR /app
-COPY --from=builder /app/build/libs/*.jar user.jar
+COPY --from=builder /app/build/libs/*.jar booking.jar
 EXPOSE 8002
-ENTRYPOINT ["java", "-jar", "user.jar"]
+ENTRYPOINT ["java", "-jar", "booking.jar"]
