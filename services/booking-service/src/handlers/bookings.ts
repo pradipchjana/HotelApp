@@ -12,7 +12,7 @@ export const listBookings = async (c: Context) => {
 
 export const addBooking = async (c: Context) => {
   const serviceServer = Deno.env.get("SEARCH_SERVICE") || "localhost";
-
+  
   const db: MongoStorage = c.get("db");
   const redis: Redis = c.get("redis");
   const username: string = c.get("username");

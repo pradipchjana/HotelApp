@@ -12,7 +12,7 @@ type Variables = {
   redis: Redis;
 };
 
-const JWTSECRET = Deno.env.get("JWTSECRET") as string;
+const JWTSECRET = Deno.env.get("JWT_SECRET") as string;
 
 export const createApp = (db: MongoStorage, redis: Redis) => {
   const app = new Hono<{ Variables: Variables }>();
