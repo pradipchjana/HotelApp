@@ -1,4 +1,4 @@
-import { Db } from "mongodb";
+import { Db, ObjectId } from "mongodb";
 
 export class MongoStorage {
   #bookings;
@@ -12,6 +12,21 @@ export class MongoStorage {
   }
 
   async addBooking(username: string, hotel_id: string, rooms: number) {
-    await this.#bookings.insertOne({ username, hotel_id, rooms });
+    return await this.#bookings.insertOne({
+      username,
+      hotel_id,
+      rooms,
+      status: "pending",
+    });
+  }
+
+  async updateBookingStatus(
+    booking_id: string,
+    pdfPath: string,
+    status: string,
+  ) {
+    await this.#bookings.updateOne({ _id: new ObjectId(booking_id) }, {
+      $set: { pdfPath: pdfPath ? pdfPath : null, status },
+    });
   }
 }

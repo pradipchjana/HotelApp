@@ -28,13 +28,13 @@ public class HotelController {
   }
 
   @PatchMapping("/api/update/{id}")
-  public ResponseEntity<Boolean> post(@PathVariable String id, @RequestParam int rooms) {
+  public ResponseEntity<UpdateRecord> post(@PathVariable String id, @RequestParam int rooms) {
     try {
       hotelService.updateRooms(id, rooms);
-      return ResponseEntity.ok(true);
+      return ResponseEntity.ok().body(new UpdateRecord(true));
     } catch (Exception e) {
 
-      return ResponseEntity.internalServerError().body(false);
+      return ResponseEntity.internalServerError().body(new UpdateRecord(false));
     }
   }
 }

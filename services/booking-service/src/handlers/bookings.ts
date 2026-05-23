@@ -1,5 +1,6 @@
 import { Context } from "hono";
 import { MongoStorage } from "../db/mongo.ts";
+import { Redis } from "@db/redis";
 
 export const listBookings = async (c: Context) => {
   const db: MongoStorage = c.get("db");
@@ -10,34 +11,37 @@ export const listBookings = async (c: Context) => {
 };
 
 export const addBooking = async (c: Context) => {
-  const serviceServer = Deno.env.get("SEARCHSERVICE") || "localhost";
-  
+  const serviceServer = Deno.env.get("SEARCH_SERVICE") || "localhost";
+
   const db: MongoStorage = c.get("db");
+  const redis: Redis = c.get("redis");
   const username: string = c.get("username");
   const details = await c.req.json();
   const { hotel_id, rooms } = details;
 
-  return fetch(`http://${serviceServer}:8001/api/hotels/${hotel_id}`)
-    .then((x) => x.json())
-    .then(async (res) => {
-      if (!res) return c.json({ status: false, message: "Hotel not found" });
+  const res = await fetch(`http://${serviceServer}:8001/api/hotels/${hotel_id}`)
+    .then((x) => x.json());
 
-      if (res.availableRooms >= rooms) {
-        db.addBooking(username, hotel_id, rooms);
+  if (!res) return c.json({ status: false, message: "Hotel not found" });
 
-        return await fetch(
-          `http://${serviceServer}:8001/api/update/${hotel_id}?rooms=${rooms}`,
-          { method: "PATCH" },
-        )
-          .then((res) => res.json())
-          .then((response) => {
-            if (response) {
-              return c.json({ status: true, message: "Booked" });
-            }
-            return c.json({ status: false, message: "Rooms not available" });
-          });
-      }
+  if (res.availableRooms >= rooms) {
+    const booking = await db.addBooking(username, hotel_id, rooms);
 
-      return c.json({ status: false, message: "Rooms not available" });
+    await redis.lpush(
+      "UPDATE_ROOM",
+      JSON.stringify({
+        booking_id: booking.insertedId,
+        hotel_id,
+        rooms,
+        username,
+      }),
+    );
+
+    return c.json({
+      status: true,
+      message: "Hotel Booked. Receipt is pending",
     });
+  }
+
+  return c.json({ status: false, message: "Rooms not available" });
 };

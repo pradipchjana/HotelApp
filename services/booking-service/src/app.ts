@@ -4,15 +4,17 @@ import { cors } from "hono/cors";
 import { addBooking, listBookings } from "./handlers/bookings.ts";
 import { MongoStorage } from "./db/mongo.ts";
 import { decode } from "@gz/jwt";
+import { Redis } from "@db/redis";
 
 type Variables = {
-  db: unknown;
+  db: MongoStorage;
   username: string;
+  redis: Redis;
 };
 
 const JWTSECRET = Deno.env.get("JWTSECRET") as string;
 
-export const createApp = (db: MongoStorage) => {
+export const createApp = (db: MongoStorage, redis: Redis) => {
   const app = new Hono<{ Variables: Variables }>();
 
   app.use(logger());
@@ -44,6 +46,7 @@ export const createApp = (db: MongoStorage) => {
 
   app.use(async (c, next) => {
     c.set("db", db);
+    c.set("redis", redis);
     await next();
   });
 
