@@ -8,4 +8,4 @@ FROM denoland/deno:2.3.1
 WORKDIR /app
 COPY --from=builder /app /app
 EXPOSE 8002
-CMD ["deno", "run", "--allow-net", "--allow-env", "--allow-read", "--allow-sys","main.ts"]
+CMD ["deno", "run", "-A","main.ts"]

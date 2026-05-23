@@ -11,6 +11,7 @@ services:
       - user-service
       - search-service
       - booking-service
+      - booking-worker
     networks:
       - hotel-network
 
@@ -34,7 +35,7 @@ services:
       context: ./services/hotel-service
     container_name: search-service
     expose:
-       - "8001"
+      - "8001"
     environment:
       SERVER_PORT: 8001
       REDIS_HOST: redis
@@ -43,6 +44,19 @@ services:
     depends_on:
       - mongodb
       - redis
+    networks:
+      - hotel-network
+
+  booking-worker:
+    build: ./services/booking-service
+    command:
+      [ "deno", "run", "-A", "src/worker/worker.ts" ]
+    environment:
+      REDIS_HOST: redis
+      MONGO_URI: mongodb://mongodb:27017
+    depends_on:
+      - redis
+      - mongodb
     networks:
       - hotel-network
 
@@ -56,7 +70,7 @@ services:
       PORT: 8002
       SEARCH_SERVICE: search-service
       REDIS_HOST: redis
-      MONGODB_URI: mongodb://mongodb:27017
+      MONGO_URI: mongodb://mongodb:27017
       JWT_SECRET: "ourhotelappmadebykhasimjanadinesh"
     depends_on:
       - mongodb
