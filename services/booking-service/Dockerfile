@@ -1,13 +1,11 @@
-FROM gradle:9.5.0-jdk25 AS builder
+FROM denoland/deno:2.3.1 AS builder
 WORKDIR /app
-COPY build.gradle settings.gradle gradlew ./
-COPY gradle ./gradle
-RUN gradle dependencies --no-daemon || true
-COPY src ./src
-RUN gradle clean bootJar --no-daemon
+COPY deno.json deno.lock ./
+COPY . .
+RUN deno cache main.ts
 
-FROM eclipse-temurin:25-jre
+FROM denoland/deno:2.3.1
 WORKDIR /app
-COPY --from=builder /app/build/libs/*.jar booking.jar
+COPY --from=builder /app /app
 EXPOSE 8002
-ENTRYPOINT ["java", "-jar", "booking.jar"]
+CMD ["deno", "run", "--allow-net", "--allow-env", "--allow-read", "--allow-sys","main.ts"]

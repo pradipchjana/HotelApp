@@ -3,8 +3,10 @@ package com.hotelApp.hotel.modal;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 @Document(collection = "hotels")
-public final class Hotel {
+public final class Hotel implements Serializable {
     @Id
     public final String id;
     public final String name;

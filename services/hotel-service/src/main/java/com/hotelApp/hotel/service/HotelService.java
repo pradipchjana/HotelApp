@@ -2,6 +2,7 @@ package com.hotelApp.hotel.service;
 
 import com.hotelApp.hotel.modal.Hotel;
 import com.hotelApp.hotel.repository.HotelRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class HotelService {
         this.hotelRepository = hotelRepository;
     }
 
+    @Cacheable(value = "hotels", key = "#city")
     public List<Hotel> findHotels(String city) {
         return this.hotelRepository.findAllByCity(city);
     }

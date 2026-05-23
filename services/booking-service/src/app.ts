@@ -10,7 +10,7 @@ type Variables = {
   username: string;
 };
 
-const JWTSECRET = Deno.env.get("JWTSECRET") as string;
+const JWTSECRET = Deno.env.get("JWT_SECRET") as string;
 
 export const createApp = (db: MongoStorage) => {
   const app = new Hono<{ Variables: Variables }>();
