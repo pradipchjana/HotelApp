@@ -24,4 +24,9 @@ public class HotelService {
     public Optional<Hotel> findHotel(String id) {
         return hotelRepository.findById(id);
     }
+
+  public void updateRooms(String id, int rooms) {
+    System.out.println("It came here");
+    this.hotelRepository.updateRoomsById(id, -rooms);
+  }
 }

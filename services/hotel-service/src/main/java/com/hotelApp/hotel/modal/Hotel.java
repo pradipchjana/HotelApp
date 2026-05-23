@@ -10,7 +10,7 @@ public final class Hotel {
     public final String name;
     public final String city;
     public final int totalRooms;
-    public final int availableRooms;
+    public int availableRooms;
 
     public Hotel(String id, String name, String city, int totalRooms) {
         this.name = name;
@@ -19,5 +19,4 @@ public final class Hotel {
         this.id = id;
         this.availableRooms = this.totalRooms;
     }
-
 }

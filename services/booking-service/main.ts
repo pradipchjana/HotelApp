@@ -8,7 +8,8 @@ const main = async () => {
 
   const app = createApp(storage);
 
-  Deno.serve({ port: 8002 }, app.fetch);
+  const PORT = Deno.env.get("PORT") || 8002;
+  Deno.serve({ port: PORT as number }, app.fetch);
 };
 
 main();
