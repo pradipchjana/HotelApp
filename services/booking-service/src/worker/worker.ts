@@ -1,5 +1,6 @@
 import { initMongoDb } from "../db/initialize.ts";
 import { MongoStorage } from "../db/mongo.ts";
+import { generatePDFFile } from "../handlers/try.js";
 import { createRedis } from "../redis.ts";
 
 const startWorker = async () => {
@@ -20,7 +21,8 @@ const startWorker = async () => {
       .then((x) => x.json());
 
     if (response.success) {
-      await storage.updateBookingStatus(booking_id, "receipt_1", "completed");
+      const pdfPath = await generatePDFFile(booking_id);
+      await storage.updateBookingStatus(booking_id, pdfPath, "completed");
       continue;
     }
 

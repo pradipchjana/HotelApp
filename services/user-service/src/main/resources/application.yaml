@@ -1,6 +1,9 @@
 server:
   port: 8000
 
+jwt:
+  secret: ourhotelappmadebykhasimjanadinesh
+
 spring:
   mongodb:
     uri: ${MONGODB_URI:mongodb://localhost:27017/test}

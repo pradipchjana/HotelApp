@@ -29,4 +29,10 @@ export class MongoStorage {
       $set: { pdfPath: pdfPath ? pdfPath : null, status },
     });
   }
+
+   getPdfPath(booking_id: string) {
+    return this.#bookings.findOne({ _id: new ObjectId(booking_id) }, {
+      projection: { _id: 0, pdfPath: 1 },
+    });
+  }
 }

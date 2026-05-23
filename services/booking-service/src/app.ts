@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { cors } from "hono/cors";
-import { addBooking, listBookings } from "./handlers/bookings.ts";
+import { addBooking, getReceipt, listBookings } from "./handlers/bookings.ts";
 import { MongoStorage } from "./db/mongo.ts";
 import { decode } from "@gz/jwt";
 import { Redis } from "@db/redis";
@@ -12,7 +12,8 @@ type Variables = {
   redis: Redis;
 };
 
-const JWTSECRET = Deno.env.get("JWT_SECRET") as string;
+const JWTSECRET = Deno.env.get("JWT_SECRET") as string ||
+  "ourhotelappmadebykhasimjanadinesh";
 
 export const createApp = (db: MongoStorage, redis: Redis) => {
   const app = new Hono<{ Variables: Variables }>();
@@ -29,7 +30,6 @@ export const createApp = (db: MongoStorage, redis: Redis) => {
   app.use("*", async (c, next) => {
     try {
       const authHeader = c.req.header("Authorization");
-
       if (!authHeader) {
         return c.json({ success: false, message: "Not logged in" }, 401);
       }
@@ -39,7 +39,7 @@ export const createApp = (db: MongoStorage, redis: Redis) => {
       const userInfo = await decode(token, JWTSECRET, { algorithm: "HS256" });
       c.set("username", userInfo.sub as string);
       await next();
-    } catch {
+    } catch{
       return c.json({ success: false, message: "Invalid token" }, 401);
     }
   });
@@ -52,6 +52,7 @@ export const createApp = (db: MongoStorage, redis: Redis) => {
 
   app.get("/api/bookings", listBookings);
   app.post("/api/bookings", addBooking);
+  app.get("/api/bookings/:id/receipt.pdf", getReceipt)
 
   return app;
 };

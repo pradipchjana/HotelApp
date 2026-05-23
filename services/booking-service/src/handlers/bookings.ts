@@ -1,6 +1,7 @@
 import { Context } from "hono";
 import { MongoStorage } from "../db/mongo.ts";
 import { Redis } from "@db/redis";
+import { Document, WithId } from "mongodb";
 
 export const listBookings = async (c: Context) => {
   const db: MongoStorage = c.get("db");
@@ -12,7 +13,7 @@ export const listBookings = async (c: Context) => {
 
 export const addBooking = async (c: Context) => {
   const serviceServer = Deno.env.get("SEARCH_SERVICE") || "localhost";
-  
+
   const db: MongoStorage = c.get("db");
   const redis: Redis = c.get("redis");
   const username: string = c.get("username");
@@ -44,4 +45,20 @@ export const addBooking = async (c: Context) => {
   }
 
   return c.json({ status: false, message: "Rooms not available" });
+};
+
+type dbResponse = WithId<Document> | null;
+export const getReceipt = async (c: Context) => {
+  const { id: booking_id } = c.req.param();
+  const db: MongoStorage = c.get("db");
+
+  const data: dbResponse = await db.getPdfPath(booking_id);
+  const pdfPath = (data as WithId<Document>).pdfPath;
+
+  const pdfBytes = await Deno.readFile(pdfPath);
+
+
+  return c.body(pdfBytes, 200, {
+    "Content-Type": "application/pdf",
+  });
 };

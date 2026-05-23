@@ -1,3 +1,6 @@
 spring:
   mongodb:
     database: hotel-test
+
+jwt:
+  secret: ourhotelappmadebykhasimjanadinesh
